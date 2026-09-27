@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Photo Puzzle</title>
+  <meta name="description" content="Privacy Policy for Photo Puzzle (com.photopuzzle.game). Learn how we protect your privacy, local data storage, and zero-upload client-side photo processing.">
+  <link rel="icon" type="image/svg+xml" href="/app-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-page: #0b1120;
+      --bg-card: #151f32;
+      --bg-card-subtle: #1e293b;
+      --primary: #38bdf8;
+      --primary-gradient: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%);
+      --accent-green: #22c55e;
+      --accent-amber: #f59e0b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-subtle: #64748b;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-highlight: rgba(56, 189, 248, 0.25);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(180deg, rgba(30, 41, 59, 0.7) 0%, rgba(11, 17, 32, 0.95) 100%);
+      border-bottom: 1px solid var(--border-color);
+      padding: 40px 24px;
+      position: relative;
+    }
+
+    .header-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .badge-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid var(--border-highlight);
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .app-badge img, .app-badge svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .date-badge {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    h1 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .header-desc {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 720px;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .action-btn-primary {
+      background: var(--primary-gradient);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+      border: none;
+    }
+
+    .action-btn-primary:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+
+    .action-btn-secondary {
+      background: rgba(30, 41, 59, 0.8);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+
+    .action-btn-secondary:hover {
+      background: rgba(51, 65, 85, 0.8);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Main Layout */
+    .page-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* Highlights Grid */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .highlight-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .highlight-card:hover {
+      border-color: var(--border-highlight);
+      transform: translateY(-2px);
+    }
+
+    .highlight-icon {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .highlight-title {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .highlight-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Table of Contents */
+    .toc-card {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 40px;
+    }
+
+    .toc-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: var(--primary);
+    }
+
+    .toc-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 10px;
+    }
+
+    .toc-list a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.15s ease;
+    }
+
+    .toc-list a:hover {
+      color: var(--primary);
+    }
+
+    .toc-list span {
+      color: var(--text-subtle);
+      font-size: 0.8rem;
+      font-family: monospace;
+    }
+
+    /* Policy Content Sections */
+    .policy-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin-bottom: 28px;
+    }
+
+    .policy-section h2 {
+      font-family: var(--font-heading);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .policy-section h2 .sec-num {
+      color: var(--primary);
+      font-size: 1.1rem;
+      background: rgba(56, 189, 248, 0.1);
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .policy-section h3 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin: 20px 0 10px;
+    }
+
+    .policy-section p {
+      color: #cbd5e1;
+      margin-bottom: 16px;
+      font-size: 0.98rem;
+    }
+
+    .policy-section ul, .policy-section ol {
+      margin: 0 0 16px 24px;
+      color: #cbd5e1;
+    }
+
+    .policy-section li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .notice-box {
+      background: rgba(16, 185, 129, 0.1);
+      border-left: 4px solid var(--accent-green);
+      padding: 16px 20px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 20px 0;
+    }
+
+    .notice-box.warning {
+      background: rgba(245, 158, 11, 0.1);
+      border-left-color: var(--accent-amber);
+    }
+
+    .notice-box strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #fff;
+    }
+
+    .notice-box p {
+      margin-bottom: 0;
+      font-size: 0.92rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.92rem;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      background: rgba(30, 41, 59, 0.8);
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-weight: 600;
+    }
+
+    td {
+      color: #cbd5e1;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    footer {
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      padding: 32px 24px;
+      color: var(--text-subtle);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding: 30px 16px;
+      }
+      h1 {
+        font-size: 1.85rem;
+      }
+      .page-wrapper {
+        padding: 24px 16px 60px;
+      }
+      .policy-section {
+        padding: 20px 16px;
+      }
+      .toc-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        color: #000000;
+      }
+      header, footer, .header-actions, .toc-card {
+        display: none;
+      }
+      .policy-section {
+        background: transparent;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+        color: #111;
+      }
+      h1, h2, h3 {
+        color: #000;
+      }
+      p, li, td {
+        color: #333;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="badge-bar">
+        <div class="app-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          Photo Puzzle • Privacy Center
+        </div>
+        <span class="date-badge">Effective Date: September 27, 2026</span>
+        <span class="date-badge">• Version 1.0</span>
+      </div>
+
+      <h1>Privacy Policy</h1>
+      <p class="header-desc">
+        We respect your personal privacy. Learn how Photo Puzzle processes custom photos completely on your device, stores your progress locally, and protects your rights.
+      </p>
+
+      <div class="header-actions">
+        <a href="/" class="action-btn action-btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          Back to Game
+        </a>
+        <button onclick="window.print()" class="action-btn action-btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          Print / Save PDF
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Body -->
+  <main class="page-wrapper">
+
+    <!-- Highlights Grid -->
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon">🔒</div>
+        <div class="highlight-title">100% On-Device Photos</div>
+        <div class="highlight-text">Your personal camera and gallery photos are processed entirely on your device. They are NEVER uploaded to any server.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">👤</div>
+        <div class="highlight-title">Zero Account Needed</div>
+        <div class="highlight-text">No sign-up, email, password, or profile registration. You can jump in and play immediately with full anonymity.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">💾</div>
+        <div class="highlight-title">Local Storage Only</div>
+        <div class="highlight-text">Scores, unlocked puzzles, star points, and audio preferences are kept strictly in your local device storage.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🛡️</div>
+        <div class="highlight-title">Total User Control</div>
+        <div class="highlight-text">You can wipe all saved progress, points, and configurations with a single tap in the in-game Settings menu.</div>
+      </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="toc-card">
+      <div class="toc-title">Table of Contents</div>
+      <ul class="toc-list">
+        <li><span>01</span> <a href="#sec-overview">Overview & Application Identity</a></li>
+        <li><span>02</span> <a href="#sec-camera">Camera & Photo Library Access</a></li>
+        <li><span>03</span> <a href="#sec-storage">Information Stored Locally</a></li>
+        <li><span>04</span> <a href="#sec-ads">Third-Party Advertising & SDKs</a></li>
+        <li><span>05</span> <a href="#sec-children">Children's Privacy (COPPA & GDPR-K)</a></li>
+        <li><span>06</span> <a href="#sec-security">Data Security & Server-Free Design</a></li>
+        <li><span>07</span> <a href="#sec-rights">Your Rights (GDPR & CCPA/CPRA)</a></li>
+        <li><span>08</span> <a href="#sec-changes">Updates to This Policy</a></li>
+        <li><span>09</span> <a href="#sec-contact">Contact Information</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <section id="sec-overview" class="policy-section">
+      <h2><span class="sec-num">01</span> Overview & Application Identity</h2>
+      <p>
+        This Privacy Policy explains how <strong>Photo Puzzle</strong> ("we", "us", or "our", Application Identifier: <code>com.photopuzzle.game</code>) handles information when you use our mobile and web applications across supported platforms (iOS, Android, and Web).
+      </p>
+      <p>
+        Our core philosophy is simple: <strong>privacy by design</strong>. Photo Puzzle is built as an offline-capable, client-side photo jigsaw game. We do not require an account, we do not maintain a central database of player identities, and we do not sell your personal data.
+      </p>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="sec-camera" class="policy-section">
+      <h2><span class="sec-num">02</span> Camera & Photo Library Access</h2>
+      <p>
+        Photo Puzzle includes an interactive feature called <strong>"Create from Photo"</strong> that lets you turn any image from your device gallery or camera into a playable jigsaw puzzle.
+      </p>
+
+      <div class="notice-box">
+        <strong>Strict Client-Side Guarantee</strong>
+        <p>
+          All image slicing, rotation, resizing, and rendering algorithms execute <strong>100% locally within your device's browser/runtime memory</strong> using standard HTML5 Canvas and Web APIs. Your selected images are <strong>NEVER transmitted over the internet, NEVER uploaded to external servers, and NEVER shared with any third parties</strong>.
+        </p>
+      </div>
+
+      <p>Here is what happens when you use this feature:</p>
+      <ul>
+        <li><strong>Camera Permission:</strong> If you choose "Take Photo", the application requests permission to access your device camera strictly to capture a photo for puzzle generation. The photo remains on your device.</li>
+        <li><strong>Photo Library / File Access:</strong> If you select an existing photo from your gallery, the application reads the file locally into temporary memory to slice it into puzzle pieces.</li>
+        <li><strong>No Cloud Sync:</strong> We do not operate cloud servers for user photos. When you close the custom puzzle session or clear your session, the image data is freed from active memory.</li>
+      </ul>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="sec-storage" class="policy-section">
+      <h2><span class="sec-num">03</span> Information Stored Locally on Your Device</h2>
+      <p>
+        To ensure a continuous gameplay experience, Photo Puzzle saves certain non-identifying game preferences and game states directly to your device's local storage (such as HTML5 <code>localStorage</code> or local app sandbox):
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Data Category</th>
+            <th>Purpose</th>
+            <th>Storage Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Game Progress</strong></td>
+            <td>Tracks which puzzles you have completed and unlocked across each difficulty level (Easy, Medium, Hard, Expert).</td>
+            <td>On-device local storage</td>
+          </tr>
+          <tr>
+            <td><strong>Star Points Balance</strong></td>
+            <td>Records your accumulated reward points earned from solving puzzles and used for hints.</td>
+            <td>On-device local storage</td>
+          </tr>
+          <tr>
+            <td><strong>Audio & Haptic Settings</strong></td>
+            <td>Saves your preferences for Sound Effects (on/off), Ambient Harmony music (on/off), and Haptic Feedback vibration (on/off).</td>
+            <td>On-device local storage</td>
+          </tr>
+          <tr>
+            <td><strong>Active Session State</strong></td>
+            <td>Saves in-progress puzzle piece positions so you can resume playing without losing your work.</td>
+            <td>On-device local storage</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="notice-box warning">
+        <strong>How to Delete Your Local Data:</strong>
+        <p>
+          You have full control. You can permanently erase all progress, points, and saved states at any time by opening the in-game <strong>Settings</strong> modal and tapping <strong>"Reset All Progress"</strong>, or by clearing your browser/app storage data in your operating system settings.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section id="sec-ads" class="policy-section">
+      <h2><span class="sec-num">04</span> Third-Party Advertising & SDKs</h2>
+      <p>
+        To keep Photo Puzzle free to play, the application may include third-party advertising services, such as <strong>Google AdMob</strong> (Google Mobile Ads SDK).
+      </p>
+
+      <h3>How Advertising Works</h3>
+      <p>
+        When advertising is enabled, ad partners may collect and process pseudonymous identifiers and diagnostic technical data to deliver, measure, and optimize advertisements. This may include:
+      </p>
+      <ul>
+        <li>Mobile Advertising Identifiers (such as Google Advertising ID on Android or IDFA on iOS).</li>
+        <li>Coarse IP address (used for approximate regional geolocation and fraud prevention).</li>
+        <li>Device information (hardware model, operating system version, screen resolution, locale/language).</li>
+        <li>Ad performance metrics (impressions, clicks, and video completion rates).</li>
+      </ul>
+
+      <h3>Third-Party Privacy Policies</h3>
+      <p>
+        Google AdMob's data practices are governed by Google's Privacy Policy. For more information on how Google uses data from partner apps, please visit:
+      </p>
+      <p>
+        <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;">
+          Google Privacy & Terms: How Google uses information from sites or apps that use our services &nearr;
+        </a>
+      </p>
+
+      <h3>Managing Your Ad Preferences & Opting Out</h3>
+      <p>You can limit personalized advertising or reset your advertising identifier directly on your mobile device:</p>
+      <ul>
+        <li><strong>On Android:</strong> Go to <em>Settings &gt; Google &gt; Ads &gt; Reset advertising ID</em> or enable <em>Delete advertising ID</em>.</li>
+        <li><strong>On iOS:</strong> Go to <em>Settings &gt; Privacy &amp; Security &gt; Tracking</em> and disable tracking permissions, or visit <em>Apple Advertising</em> to turn off Personalized Ads.</li>
+      </ul>
+    </section>
+
+    <!-- Section 5 -->
+    <section id="sec-children" class="policy-section">
+      <h2><span class="sec-num">05</span> Children's Privacy (COPPA &amp; GDPR-K)</h2>
+      <p>
+        Photo Puzzle is designed as a family-friendly casual puzzle game suitable for all ages. Protecting the privacy of children is of paramount importance to us.
+      </p>
+      <ul>
+        <li>We do not knowingly collect, request, or solicit personal data from children under the age of 13 (or under 16 in the European Union).</li>
+        <li>We do not require account registration, social logins, or chat functionality.</li>
+        <li>If ad networks are configured for child-directed audiences, advertisements are served in compliance with Google Play Families Policy and COPPA guidelines (non-personalized, contextual-only ads).</li>
+      </ul>
+      <p>
+        If a parent or guardian believes that any personal information has inadvertently been provided, please contact us immediately so we can promptly address the situation.
+      </p>
+    </section>
+
+    <!-- Section 6 -->
+    <section id="sec-security" class="policy-section">
+      <h2><span class="sec-num">06</span> Data Security &amp; Server-Free Design</h2>
+      <p>
+        Because Photo Puzzle does not host user accounts, user photo databases, or personal profile servers, the risk of remote server breaches or data leaks concerning your photos is fundamentally eliminated.
+      </p>
+      <p>
+        All local game data is sandboxed within your device's operating system security boundaries according to standard Android, iOS, and browser security protocols.
+      </p>
+    </section>
+
+    <!-- Section 7 -->
+    <section id="sec-rights" class="policy-section">
+      <h2><span class="sec-num">07</span> Your Rights (GDPR &amp; CCPA/CPRA)</h2>
+      <p>
+        Depending on your region of residence (such as the European Economic Area, United Kingdom, or California), you may have legal rights regarding your data:
+      </p>
+      <ul>
+        <li><strong>Right to Know / Access:</strong> You have the right to know what data is collected. As documented here, we only store local game progress and settings on your device.</li>
+        <li><strong>Right to Deletion:</strong> You can erase all gameplay data anytime via the in-app "Reset All Progress" button or device application storage settings.</li>
+        <li><strong>Right to Opt-Out of Sale / Sharing:</strong> We do not sell personal data. You can opt out of personalized interest-based advertising via your device settings as outlined in Section 04.</li>
+        <li><strong>Non-Discrimination:</strong> Exercising your privacy rights will not result in any penalty or denial of service in Photo Puzzle.</li>
+      </ul>
+    </section>
+
+    <!-- Section 8 -->
+    <section id="sec-changes" class="policy-section">
+      <h2><span class="sec-num">08</span> Updates to This Privacy Policy</h2>
+      <p>
+        We may occasionally update this Privacy Policy to reflect improvements in our application, changes in applicable laws, or additions to third-party services.
+      </p>
+      <p>
+        Any modifications will be posted to this page with an updated "Effective Date". We encourage you to review this policy periodically. Continued use of Photo Puzzle after any revisions signifies your acceptance of the updated terms.
+      </p>
+    </section>
+
+    <!-- Section 9 -->
+    <section id="sec-contact" class="policy-section">
+      <h2><span class="sec-num">09</span> Contact Information</h2>
+      <p>
+        If you have questions, feedback, or concerns regarding this Privacy Policy or the privacy practices of Photo Puzzle, please contact us:
+      </p>
+      <div style="background: rgba(30, 41, 59, 0.6); padding: 18px 24px; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-top: 12px;">
+        <p style="margin-bottom: 6px;"><strong>Photo Puzzle Development Team</strong></p>
+        <p style="margin-bottom: 6px;">Application: <code>photopuzzle</code></p>
+        <p style="margin-bottom: 6px;">Email: <a href="mailto:imrankhanjet@gmail.com" style="color: var(--primary);">support</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 8px; align-items: center;">
+      <div>&copy; 2026 Photo Puzzle. All rights reserved.</div>
+      <div>Designed with privacy-first client-side architecture.</div>
+      <div><a href="/">Play Photo Puzzle Now</a></div>
+    </div>
+  </footer>
+
+</body>
+</html>
